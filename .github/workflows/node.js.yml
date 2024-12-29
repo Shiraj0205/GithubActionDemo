@@ -30,7 +30,9 @@ jobs:
     - name: Install Dependencies
       run: npm install
       working-directory: ./ci_javascript
-    - name: npm build
+    - name: Build Application
       run: npm run build --if-present
       working-directory: ./ci_javascript
-    - run: npm test
+    - name: Test Application
+      run: npm test
+      working-directory: ./ci_javascript
